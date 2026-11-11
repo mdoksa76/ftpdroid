@@ -2,8 +2,8 @@
   "uuid": "ftpdroid@mdoksa76.github.com",
   "name": "ftpDroid",
   "description": "Scan the local network for Android devices running a fixed-port FTP server (CX File Explorer's \"Access from network\", or any similar app) and mount the selected one in Nautilus with a single click. Each device is identified by its unique FTP port. Thanks to the CX File Explorer team, whose \"Access from network\" feature makes this possible.",
-  "shell-version": ["45", "46", "47", "48", "49", "50"],
+  "shell-version": ["45", "46", "47", "48", "49"],
   "settings-schema": "org.gnome.shell.extensions.ftpdroid",
   "gettext-domain": "ftpdroid",
-  "url": "https://github.com/mdoksa76"
+  "url": "https://github.com/mdoksa76/ftpdroid"
 }
