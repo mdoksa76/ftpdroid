@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.ftpdroid"
+          path="/org/gnome/shell/extensions/ftpdroid/">
+    <!-- JSON array of devices:
+         [{ "name": "Redmi", "port": 7967, "user": "u", "pass": "p" }, ...] -->
+    <key name="devices" type="s">
+      <default>'[]'</default>
+      <summary>Device catalog</summary>
+      <description>JSON array of FTP devices (name, port, user, pass).</description>
+    </key>
+    <!-- JSON object caching last-seen IP per port: { "7967": "192.168.1.50" } -->
+    <key name="ip-cache" type="s">
+      <default>'{}'</default>
+      <summary>Last-seen IP per port</summary>
+      <description>JSON object mapping FTP port to the last IP it answered on.</description>
+    </key>
+    <key name="probe-timeout" type="i">
+      <default>400</default>
+      <summary>Per-host TCP probe timeout (ms)</summary>
+      <description>How long to wait for a TCP connection to the FTP port before giving up.</description>
+    </key>
+    <!-- JSON array of sync pairs, each bound to a device by port:
+         [{ "name": "Photos", "port": 7967, "remote": "DCIM/Camera",
+            "local": "/home/mario/Pictures/Redmi" }, ...]
+         "remote" is relative to the FTP root; "local" is an absolute PC path. -->
+    <key name="sync-pairs" type="s">
+      <default>'[]'</default>
+      <summary>Sync path pairs</summary>
+      <description>JSON array of {name, port, remote, local} copy pairs (phone → PC).</description>
+    </key>
+  </schema>
+</schemalist>
